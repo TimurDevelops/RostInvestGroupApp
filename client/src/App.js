@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import React from "react";
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
+import Main from "./components/page/main/Main";
+import Category from "./components/page/category/Category";
+import Product from "./components/page/product/Product";
+
+import Header from "./components/pageComponents/Header";
+import Footer from "./components/pageComponents/Footer";
+
 import './App.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Rost Invest Group
-        </a>
-      </header>
+    <div className="main-page-wrapper">
+      <Header/>
+      <Router>
+        <Routes>
+          {/* Main Page */}
+          <Route path="/main"
+                 element={<Main/>
+                 }/>
+
+          {/* Category Page */}
+          <Route path="/category/:categoryId"
+                 element={<Category/>
+                 }/>
+
+          {/* Product Page */}
+          <Route path="/product/:productId"
+                 element={<Product/>
+                 }/>
+
+          {/* Navigation */}
+          <Route path="*" element={<Navigate to="/main"/>}/>
+
+        </Routes>
+      </Router>
+      <Footer/>
     </div>
   );
 }
