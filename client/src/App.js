@@ -8,14 +8,14 @@ import Header from "./components/pageComponents/Header";
 import Footer from "./components/pageComponents/Footer";
 
 import './App.css';
-
+import './Common.scss';
 
 
 function App() {
   return (
     <div className="main-page-wrapper">
-      <Header/>
       <Router>
+        <Header/>
         <Routes>
           {/* Main Page */}
           <Route path="/main"
@@ -36,8 +36,8 @@ function App() {
           <Route path="*" element={<Navigate to="/main"/>}/>
 
         </Routes>
+        <Footer/>
       </Router>
-      <Footer/>
     </div>
   );
 }

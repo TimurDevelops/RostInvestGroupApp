@@ -1,0 +1,150 @@
+@import "../../Common";
+
+.header-wrapper {
+  background: white;
+  box-shadow: #ddd 1px 1px 15px;
+  height: 4em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .header-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+
+    .header-menu-button {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .header-menu-button-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2.5em;
+        cursor: pointer;
+        color: #777;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+    }
+
+    .header-logo {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+
+        .header-logo-content {
+          height: 100%;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+    }
+
+    .header-search {
+      flex: 8;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 1px solid #eee;
+      border-left: 1px solid #eee;
+      padding: 0 1em;
+
+      input {
+        font-family: "Roboto", sans-serif;
+        border: 0;
+        font-size: 1.25em;
+        outline: none;
+      }
+
+      .m-glass {
+        color: #777;
+        font-size: 1.5em;
+        cursor: pointer;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+    }
+
+    .header-phone {
+      flex: 4;
+      display: flex;
+      justify-content: center;
+      font-family: "Avenir Next", sans-serif;
+
+      .header-phone-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .header-phone-number {
+          font-size: 1.25em;
+          font-weight: bold;
+          margin-bottom: .1em;
+        }
+
+        .header-request-call {
+          font-size: .95em;
+          cursor: pointer;
+          color: #3fb1d7;
+        }
+      }
+    }
+
+    .header-socials {
+      flex: 2;
+      display: flex;
+      align-items: center;
+
+      .header-social-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: .5em;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        width: 2.5em;
+        height: 2.5em;
+        cursor: pointer;
+
+        font-size: 1.25em;
+        color: #0142c5;
+        transition: all ease-in-out 300ms;
+        background: #fff;
+
+
+      }
+
+      .vk:hover {
+        background: #8287c4;
+      }
+
+      .insta:hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      }
+    }
+  }
+}
